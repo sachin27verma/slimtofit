@@ -6,11 +6,11 @@ export const Herosection = () => {
     <div className="">
       <div className="bg-red-500 fixed w-full h-25 z-50">
         <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
-          <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+          <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"> <img src="logo.png" class="h-6 mr-3 rounded-full sm:h-9" alt="Landwind Logo"/>
             <a href="#" class="flex items-center">
-              {/* <img src="https://www.svgrepo.com/show/499962/music.svg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo"> */}
+             
               <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-                SAS
+                {/* SAS */}
               </span>
             </a>
             <div class="flex items-center lg:order-2">
@@ -20,7 +20,7 @@ export const Herosection = () => {
 
               <a
                 href="https://themesberg.com/product/tailwind-css/landing-page"
-                class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">
+                class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-green-600 dark:hover:bg-green-700 focus:outline-none dark:focus:ring-green-800">
                 Sign In
               </a>
               <button
@@ -59,7 +59,7 @@ export const Herosection = () => {
                 <li>
                   <a
                     href="#"
-                    class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white"
+                    class="block py-2 pl-3 pr-4 text-green-400 bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-green-400"
                     aria-current="page">
                     Home
                   </a>
@@ -67,7 +67,7 @@ export const Herosection = () => {
                 <li>
                   <a
                     href="#"
-                    class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                    class="block py-2 pl-3 pr-4 text-gray-700 border-b border-green-400 hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-green-400 lg:dark:hover:bg-transparent dark:border-gray-700">
                     Company
                   </a>
                 </li>
