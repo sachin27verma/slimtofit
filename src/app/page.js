@@ -28,7 +28,7 @@ export default function Home() {
   <Stats/>
   <Success/>
   <Testimonial reviews={reviews}/>
-  <Footer/>
+  {/* <Footer/> */}
   </>
   );
 }

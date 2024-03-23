@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Card from './Card'
 // import reviews from '../data'
 import {FiChevronLeft, FiChevronRight } from 'react-icons/fi'
+import Link from 'next/link';
 
 export const Testimonial = ({ reviews }) => {
 
@@ -54,11 +55,13 @@ export const Testimonial = ({ reviews }) => {
                 </button>
             </div>
             <div className='mt-6'>
+                <Link href='/TestimonialForm'>
                 <button 
                     onClick={surpriseHandler}
                     className='bg-green-500 hover:bg-violet-500 transition-all duration-200 cursor-pointer px-10 py-2 rounded-md font-bold text-white text-lg'>
                    Add Your Experience
                 </button>
+                </Link>
             </div>
             </div>
             </div>
