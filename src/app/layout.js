@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "./Footer/page";
+import { Header } from "./Header/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,11 @@ export default function RootLayout({ children }) {
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap')
 </style>
       </head>
-      <body className={inter.className}>{children}</body>
+      
+      <body className={inter.className}>
+        <Header/>
+        {children}
+      <Footer/></body>
     </html>
   );
 }

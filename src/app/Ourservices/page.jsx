@@ -1,7 +1,10 @@
 import React from 'react';
+import { ProductCard } from '../products/page';
+import Productcard from '@/components/Productcard';
 // import Button from './Button'; // Assuming Button component is defined in a separate file
 
 export const Services = () => {
+  const productdata=[1,2,3,4]
   return (
     <div>
       <div>
@@ -13,126 +16,8 @@ export const Services = () => {
       // style={{ backgroundImage: "url('./h6.jpg')",}}
       >
         <div className=' w-5/6 mx-auto flex justify-center flex-wrap gap-[100px] '>
-        <div className='w-[414px] h-[275px] bg-gray-50 shadow-xl rounded-md'>
-        <div className="flex  justify-center items-center p-6 bg-[#f0fdf4]">
-          <div className="flex items-center ">
-            {/* Replace the src attribute with the correct image source */}
-            <img
-              alt="Bowl of food"
-              className="h-20 w-20 rounded-full"
-              src="food1.jpeg" // Replace this with the correct image source
-              style={{
-                aspectRatio: "1/1",
-                objectFit: "cover",
-              }}
-            />
-            <div className="ml-4">
-              <h2 className="text-2xl font-bold text-[#065f46]">Slimming Menu</h2>
-              <p className="text-[#065f46]">800-1200 kcal</p>
-            </div>
-          </div>
-          <LeafIcon className="h-6 w-6 text-[#065f46]" />
-        </div>
-        <div className="p-6">
-          <p className="text-sm text-gray-600">
-            We have gathered for you the freshest programs using delicious organic products from around the world.
-          </p>
-          <div className="mt-4 flex justify-between items-baseline">
-            <span className="text-lg font-semibold text-[#065f46]">$49.99 USD/week</span>
-            <button className="bg-[#10b981] p-3 text-white">Order Now</button>
-          </div>
-        </div>
-        </div>
-        <div className='w-[414px] h-[275px] bg-gray-50 shadow-xl rounded-md'>
-        <div className="flex  justify-between items-center p-6 bg-[#f0fdf4]">
-          <div className="flex items-center">
-            {/* Replace the src attribute with the correct image source */}
-            <img
-              alt="Bowl of food"
-              className="h-20 w-20 rounded-full"
-              src="food2.jpeg" // Replace this with the correct image source
-              style={{
-                aspectRatio: "1/1",
-                objectFit: "cover",
-              }}
-            />
-            <div className="ml-4">
-              <h2 className="text-2xl font-bold text-[#065f46]">Slimming Menu</h2>
-              <p className="text-[#065f46]">800-1200 kcal</p>
-            </div>
-          </div>
-          <LeafIcon className="h-6 w-6 text-[#065f46]" />
-        </div>
-        <div className="p-6">
-          <p className="text-sm text-gray-600">
-            We have gathered for you the freshest programs using delicious organic products from around the world.
-          </p>
-          <div className="mt-4 flex justify-between items-baseline">
-            <span className="text-lg font-semibold text-[#065f46]">$49.99 USD/week</span>
-            <button className="bg-[#10b981] p-3 text-white">Order Now</button>
-          </div>
-        </div>
-        </div>
-        <div className='w-[414px] h-[275px] bg-gray-50 shadow-xl rounded-md'>
-        <div className="flex  justify-center items-center p-6 bg-[#f0fdf4]">
-          <div className="flex items-center ">
-            {/* Replace the src attribute with the correct image source */}
-            <img
-              alt="Bowl of food"
-              className="h-20 w-20 rounded-full"
-              src="food1.jpeg" // Replace this with the correct image source
-              style={{
-                aspectRatio: "1/1",
-                objectFit: "cover",
-              }}
-            />
-            <div className="ml-4">
-              <h2 className="text-2xl font-bold text-[#065f46]">Slimming Menu</h2>
-              <p className="text-[#065f46]">800-1200 kcal</p>
-            </div>
-          </div>
-          <LeafIcon className="h-6 w-6 text-[#065f46]" />
-        </div>
-        <div className="p-6">
-          <p className="text-sm text-gray-600">
-            We have gathered for you the freshest programs using delicious organic products from around the world.
-          </p>
-          <div className="mt-4 flex justify-between items-baseline">
-            <span className="text-lg font-semibold text-[#065f46]">$49.99 USD/week</span>
-            <button className="bg-[#10b981] p-3 text-white">Order Now</button>
-          </div>
-        </div>
-        </div>
-        <div className='w-[414px] h-[275px] bg-gray-50 shadow-xl rounded-md'>
-        <div className="flex  justify-between items-center p-6 bg-[#f0fdf4]">
-          <div className="flex items-center">
-            {/* Replace the src attribute with the correct image source */}
-            <img
-              alt="Bowl of food"
-              className="h-20 w-20 rounded-full"
-              src="food2.jpeg" // Replace this with the correct image source
-              style={{
-                aspectRatio: "1/1",
-                objectFit: "cover",
-              }}
-            />
-            <div className="ml-4">
-              <h2 className="text-2xl font-bold text-[#065f46]">Slimming Menu</h2>
-              <p className="text-[#065f46]">800-1200 kcal</p>
-            </div>
-          </div>
-          <LeafIcon className="h-6 w-6 text-[#065f46]" />
-        </div>
-        <div className="p-6">
-          <p className="text-sm text-gray-600">
-            We have gathered for you the freshest programs using delicious organic products from around the world.
-          </p>
-          <div className="mt-4 flex justify-between items-baseline">
-            <span className="text-lg font-semibold text-[#065f46]">$49.99 USD/week</span>
-            <button className="bg-[#10b981] p-3 text-white">Order Now</button>
-          </div>
-        </div>
-        </div>
+          {productdata.map((e)=>(<Productcard key={e.index}/>))}
+        <Productcard/>
         </div>
       </div>
     </div>
