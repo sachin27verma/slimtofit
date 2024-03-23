@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "./Footer/page";
-import { Header } from "./Header/page";
-
+import AuthProvider from "./context/authprovider"
+// import ToasterProvider from "../lib/providers/ToasterProvider";
+// import ToasterProvider from "@/components/lib/providers/ToasterProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -12,17 +12,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="en">
       <head>
-      <style>
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap')
-</style>
+      {/* <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap')
+       </style> */}
       </head>
-      
       <body className={inter.className}>
-        <Header/>
+      <AuthProvider>
+      {/* <ToasterProvider /> */}
         {children}
-      <Footer/></body>
+        </AuthProvider>
+        </body>
     </html>
+    
   );
 }

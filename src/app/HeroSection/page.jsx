@@ -1,8 +1,18 @@
+"use client"
 import Image from "next/image";
 import React from "react";
+import { useSession, signIn, signOut } from "next-auth/react"
 import { Header } from "../Header/page";
-
+import { CircleUserRound, Menu, Search, ShoppingCart } from "lucide-react";
 export const Herosection = () => {
+  const  {data:session } = useSession();
+  console.log(session);
+  console.log(session?.data);
+  let loggedIn = false;
+  if(session?.success)
+  {
+     loggedIn = true;
+  }
   return (
     <div className="">
       <div className="bg-red-500 fixed w-full h-25 z-50">

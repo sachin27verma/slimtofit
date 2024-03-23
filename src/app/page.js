@@ -12,11 +12,13 @@ import { Success } from './Successtory/page';
 import Testimonial from './Whatclientsay/page';
 import { ProductCard } from './products/page';
 import { About } from './whychooseit/page';
-import reviews from '@/Data/data';
+import reviews from '../Data/data';
+import { Header } from './Header/page';
 
 export default function Home() {
   return (
     <>
+    <Header/>
   <Herosection/>
   
   <ProductCard/>
