@@ -26,7 +26,7 @@ export const About = () => {
         <div className="flex-1">
           <img
             alt="Spices and herbs"
-            className="object-cover rounded-tr-3xl rounded-bl-3xl p-4 object-top w-full h-full"
+            className="object-cover rounded-tr-3xl rounded-bl-3xl p-5 object-top w-full h-full"
             height="768"
             src="/h3.jpg"
             style={{
