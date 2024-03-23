@@ -12,7 +12,7 @@ export const About = () => {
   };
 
   return (
-    <div className="about-section pt-4"> {/* Added a class for easier styling */}
+    <div className="about-section Features pt-4"> {/* Added a class for easier styling */}
       <div className="about-content flex justify-center items-center flex-col"> {/* Tailwind classes for centering */}
         <h1 className="about-title abril-fatface-regular tracking-wider text-center text-5xl font-bold mb-4 text-green-500"> {/* Tailwind classes for styling */}
           Why Choose Us?

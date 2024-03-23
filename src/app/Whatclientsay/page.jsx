@@ -25,7 +25,7 @@ export const Testimonial = ({ reviews }) => {
     }
 
     return (
-        <div className=' shadow-lg border-t-green-400  '>
+        <div className=' Testimonialll shadow-lg border-t-green-400  '>
             <h1 className="about-title abril-fatface-regular m-10 tracking-wider text-center text-5xl font-bold mb-4  text-green-500">
     WHat Clients Say about Us
   </h1>

@@ -6,7 +6,7 @@ import Productcard from '@/components/Productcard';
 export const Services = () => {
   const productdata=[1,2,3,4]
   return (
-    <div>
+    <div className='Services'>
       <div>
         <h1 className="about-title abril-fatface-regular tracking-wider text-center text-5xl font-bold mb-4 m-10 text-green-500">
           Our Services

@@ -169,7 +169,7 @@ const MentalHealth = () => {
         ) : (
           <button
             onClick={handlePrediction}
-            className="  bg-midnight p-2 font-bold flex jc items-center my-3 text-white rounded-lg px-3">
+            className="  bg-midnight p-2 font-bold flex jc items-center my-3 text-white bg-green-500 p-2 rounded-lg px-3">
             Predict
           </button>
         )}

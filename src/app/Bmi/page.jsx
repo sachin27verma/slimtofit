@@ -13,11 +13,11 @@ const BMICalculator = () => {
   };
 
   return (
-<div>
+<div className='BMI'>
 <h1 className="about-title abril-fatface-regular m-10 tracking-wider text-center text-5xl font-bold mb-4  text-green-500">
           Bmi Calculator
         </h1>
-    <div className="container w-2/6 shadow-xl mx-auto m-10 p-4 bg-green-100 shadow-md"> {/* Herbal green background */}
+    <div className="container w-2/6 shadow-xl mx-auto m-10 p-4 bg-green-100 "> {/* Herbal green background */}
       
 
       <div className="  mx-auto   justify-between gap-4">  {/* Grid layout for inputs and button */}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Page = () => {
   return (
-    <div className="min-h-screen bg-green-500 flex justify-center items-center">
+    <div className="min-h-screen Testimonial bg-green-500 flex justify-center items-center">
       <div className="max-w-md bg-white rounded-lg shadow-lg p-6">
         <h1 className="text-3xl font-bold text-center mb-4">Submit a testimonial</h1>
         <p className="text-gray-500 text-center mb-6">We'd love to hear your thoughts!</p>
