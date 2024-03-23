@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '@/components/Cards/page'; // Assuming CardHover is in this location
+import Card from '../../components/Cards/page'; // Assuming CardHover is in this location
 
 export const About = () => {
   // Provide meaningful default values for CardHover parameters

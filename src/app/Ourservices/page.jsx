@@ -1,6 +1,7 @@
 import React from 'react';
 import { ProductCard } from '../products/page';
-import Productcard from '@/components/Productcard';
+// import Productcard from '@/components/Productcard';
+import Productcard from '../../components/Productcard';
 // import Button from './Button'; // Assuming Button component is defined in a separate file
 
 export const Services = () => {
