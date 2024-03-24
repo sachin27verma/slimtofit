@@ -1,7 +1,22 @@
+"use client"
 import React from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { CircleUserRound, Menu, Search, ShoppingCart } from "lucide-react";
+import Link from 'next/link';
 export const Header = () => {
+  const scrolltoHash = function (element_id) {
+    const element = document.getElementsByClassName(element_id)
+    element?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    
+  }
+  const  {data:session } = useSession();
+  console.log(session);
+  console.log(session?.data);
+  let loggedIn = false;
+  if(session?.success)
+  {
+     loggedIn = true;
+  }
   return (
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"> <img src="logo.jpeg" class="h-6 mr-3 rounded-full sm:h-9" alt="Landwind Logo"/>
@@ -63,44 +78,44 @@ export const Header = () => {
           <li>
             <Link
               href="/"
-              class="block  py-2 pl-3 pr-4 text-green-400 bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-green-400"
+              class="block py-2 pl-3 pr-4 text-green-400 bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-green-400"
               aria-current="page">
               Home
             </Link>
           </li>
           <li>
             <p
-              onClick={() => scrolltoHash('Services')}
-              class="block  cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-green-400 hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-green-400 lg:dark:hover:bg-transparent dark:border-gray-700">
-              Services
-            </p>
-          </li>
-          <li>
-            <p
-             onClick={() => scrolltoHash('BMI')}
-              class="block py-2 pl-3 pr-4 cursor-pointer text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-              BMI
-            </p>
-          </li>
-          <li>
-            <p
               onClick={() => scrolltoHash('Features')}
-              class="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+              class="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-green-400 hover:bg-green-700 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-green-400 lg:dark:hover:bg-transparent dark:border-gray-700">
               Features
             </p>
           </li>
           <li>
             <p
-              onClick={() => scrolltoHash('Offers')}
-              class="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-              Offers
+              onClick={() => scrolltoHash('BMI')}
+              class="block cursor-pointer  py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+              BMI
             </p>
           </li>
           <li>
             <p
-              onClick={() => scrolltoHash('Testimonialll')}
+              onClick={() => scrolltoHash('Category')}
+              class="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+              Category
+            </p>
+          </li>
+          <li>
+            <p
+              onClick={() => scrolltoHash('Testimonial')}
               class="block cursor-pointer py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
               Testimonial
+            </p>
+          </li>
+          <li>
+            <p
+              onClick={() => scrolltoHash('Services')}
+              class="block cursor-pointer   py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+              Services
             </p>
           </li>
         </ul>
