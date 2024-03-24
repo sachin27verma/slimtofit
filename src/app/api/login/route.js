@@ -1,5 +1,5 @@
-import  connectToDB  from "../../../lib/mongoDB";
-import User from "../../../lib/models/User";
+import  connectToDB  from "../../../components/lib/mongoDB";
+import User from "../../../components/lib/models/User";
 import bcrypt from 'bcrypt';
 
 export async function GET(request) {

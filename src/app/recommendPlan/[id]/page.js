@@ -1,15 +1,15 @@
 // import React, { useEffect, useState } from 'react';
-import { ProductCard } from '../products/page';
-import { getProducts } from '../../components/lib/actions/actions';
-// import Productcard from '@/components/Productcard';
-import connectToDB from '../../components/lib/mongoDB';
-import Product from '../../components/lib/models/Product';
-import Productcard from '../../components/Productcard';
+// import { Productcard } from '../../../components/Productcard';
+import Productcard from '../../../components/Productcard';
+
+import { getProducts,getRecommendProducts } from '../../../components/lib/actions/actions';
+
+
 // import Button from './Button'; // Assuming Button component is defined in a separate file
 
-export  const Services = async() => {
+export  const Services = async({params}) => {
   // const productdata=[1,2,3,4]
-  const productdata=await getProducts();
+  const productdata=await getRecommendProducts(params.id);
   console.log(productdata);
   // const [productdata,setProductdata]=useState([])
   // const fetchData=async()=>{
@@ -22,18 +22,15 @@ export  const Services = async() => {
   //  },[])
   return (
     <div>
-      <div>
-        <h1 className="about-title abril-fatface-regular tracking-wider text-center text-5xl font-bold mb-4 m-10 text-green-500">
-          Our Services
-        </h1>
-      </div>
+      
       <div className=' py-7 bg-cover flex   align-middle  bg-center' 
       // style={{ backgroundImage: "url('./h6.jpg')",}}
-      >
-        <div className=' w-5/6 mx-auto flex justify-center flex-wrap gap-[100px] '>
-          {productdata.map((e)=>(<Productcard key={e.index} item={e}/>))}
+      >{productdata.length >0 ?
+        (<div className=' w-5/6 mx-auto flex flex-col justify-center flex-wrap gap-[100px] '>
+            <h1 className='text-lg text-black font-bold mx-auto text-underline' >Recommended Products</h1>
+          {productdata.map((e)=>(<Productcard key={e.index} item={e} className="mx-auto" />))}
         {/* <Productcard/> */}
-        </div>
+        </div>):<div>No Plans Sorry</div>}
       </div>
     </div>
   );

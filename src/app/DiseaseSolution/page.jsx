@@ -9,6 +9,10 @@ import axios from "axios";
 import symptomsArray from "../../Data/SymptomArray";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import ReactLoading from "react-loading";
+import Productcard from "../../components/Productcard";
+
+import { getRecommendProducts ,getProducts} from "../../components/lib/actions/actions";
+import Link from "next/link";
 // import { useSession } from "next-auth/react";
 // import { redirect } from "next/navigation";
 
@@ -22,6 +26,7 @@ const MentalHealth = () => {
   const [about, setabout] = useState("");
   const [query, setQuery] = useState("");
   const [loading, setloading] = useState(false);
+  const [recommend,setRecommend]=useState([]);
 
   // const { data: session } = useSession();
 
@@ -32,7 +37,12 @@ const MentalHealth = () => {
   const filteredSymptoms = symptomsArray.filter((symptom) =>
     symptom.toLowerCase().includes(query.toLowerCase())
   );
-
+  const handleDisease= async (dis)=>{
+    const data= await getProducts();
+    data.filter(product =>product.category===dis)
+    console.log("rcmd",data);
+    setRecommend(data);
+  }
   const handleCheckboxChange = (index, value) => {
     const newResponses = [...responses];
     newResponses[index] = value;
@@ -185,6 +195,14 @@ const MentalHealth = () => {
       {result && (
         <div className="  md:w-4/6 w-full mx-auto text-center shadow-xl p-3 my-3 prose ">
           <p className=" text-center font-bold text-2xl ">{result}</p>
+          <Link href={`/recommendPlan/${result}`} ><button  >Show Products</button></Link>
+          
+          {
+            recommend.length > 0 && (<div className=' w-5/6 mx-auto flex justify-center flex-wrap gap-[100px] '>
+            {recommend.map((e)=>(<Productcard key={e.index} item={e}/>))}
+          {/* <Productcard/> */}
+          </div>)
+          }
           {/* <p onClick={handleclick}>Wanna Know about Diseases</p> */}
           {/* <Markdown
             remarkPlugins={[remarkGfm]}

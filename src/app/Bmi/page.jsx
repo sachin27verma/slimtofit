@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-
+import BMIChart from "../../components/BMIChart";
 const BMICalculator = () => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
@@ -52,6 +52,7 @@ const BMICalculator = () => {
       {bmi !== null && (
         <div className="mt-4">
           <p className="text-lg font-medium text-gray-700">Your BMI: {bmi}</p>
+          <BMIChart bmiValue={bmi} />
         </div>
       )}
     </div>
